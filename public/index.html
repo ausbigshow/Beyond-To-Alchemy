@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>D&D Beyond to Alchemy Converter</title>
+  <script src="index.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+</head>
+
+<body>
+  <main>
+    <h1>D&D Beyond to Alchemy Converter</h1>
+    <p>Paste your D&D Beyond character's share link and click Convert. You'll get a file to import into Alchemy.
+      Includes subclass features, homebrew, actions, weapon attacks and limited-use trackers.</p>
+    <form id="form">
+      <label for="link">Share link</label>
+      <div class="row">
+        <input type="url" id="link" required placeholder="https://www.dndbeyond.com/characters/123456789/AbCdEf">
+        <button type="submit">Convert</button>
+      </div>
+    </form>
+    <p id="status" role="status"></p>
+    <ul id="summary"></ul>
+    <details>
+      <summary>Private character or custom items?</summary>
+      <p>Share links only include public data, so D&D Beyond leaves out custom items and private characters.
+        Use the bookmarklet (see README) while logged in, then upload the file it downloads:</p>
+      <input type="file" id="upload" accept=".json">
+    </details>
+  </main>
+</body>
+
+</html>

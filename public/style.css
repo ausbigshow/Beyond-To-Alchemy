@@ -1,0 +1,37 @@
+main {
+  width: 100%;
+  max-width: 100ch;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: .25rem;
+}
+
+.row {
+  display: flex;
+  gap: .5rem;
+}
+
+.row input {
+  flex: 1;
+  min-width: 0;
+  padding: .5rem;
+}
+
+button {
+  padding: .5rem 1rem;
+}
+
+.error {
+  color: #b00020;
+}
+
+details {
+  margin-top: 2rem;
+}

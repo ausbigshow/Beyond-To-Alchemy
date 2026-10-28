@@ -1,0 +1,30 @@
+name: ci
+
+on:
+    push:
+    pull_request:
+
+jobs:
+    ci:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Setup node
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 20
+                  cache: yarn
+
+            - name: Install
+              run: yarn install --frozen-lockfile
+
+            - name: Lint typescript
+              run: yarn lint
+
+            - name: Run tests
+              run: yarn test
+
+            - name: Build extension
+              run: yarn build:extension
